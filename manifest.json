@@ -1,6 +1,6 @@
 {
-  "short_name": "Task Tracker",
-  "name": "A task tracker built with ReactJs",
+  "short_name": "React App",
+  "name": "Create React App Sample",
   "icons": [
     {
       "src": "favicon.ico",
