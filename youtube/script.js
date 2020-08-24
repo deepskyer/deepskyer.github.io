@@ -55,7 +55,7 @@ stop.addEventListener('click',(e)=>{
         },
         body: JSON.stringify({
           title: 'youtube',
-          content: time,
+          content: 0,
           rating: 3
         })
       })
