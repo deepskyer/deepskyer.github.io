@@ -1,0 +1,38 @@
+<html>
+    <body class="d-flex flex-column h-100">
+        <!-- Begin page content -->
+    <main role="main" class="flex-shrink-0">
+        <head>
+            <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.5.2/litera/bootstrap.min.css" integrity="sha384-enpDwFISL6M3ZGZ50Tjo8m65q06uLVnyvkFO3rsoW0UC15ATBFz3QEhr3hmxpYsn" crossorigin="anonymous">
+            <script src="https://code.jquery.com/jquery-3.5.1.slim.js" integrity="sha256-DrT5NfxfbHvMHux31Lkhxg42LY6of8TaYyK50jnxRnM=" crossorigin="anonymous"></script>
+            <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+        </head>
+ 
+        <section class="jumbotron text-center">
+            <div class="container">
+              <h1>Youtube Control</h1>
+
+              <p class="lead text-muted" style="margin-bottom: 2em;">Select how long your kid can watch.</p>
+              <select class="custom-select d-block w-100" id="timeLimit" required="">
+                <option value="10">10 mins</option>
+                <option value="15">15 mins</option>
+                <option value="20">20 mins</option>
+                <option value="30">30 mins</option>
+              </select>
+              
+            </div>
+            <p style="margin-top: 2em;">
+                <button id="permission" type="button" class="btn btn-success my-2" onclick="allow()">Agree to Watch</button>
+                <button id="danger" type="button" class="btn btn-danger my-2" onclick="disable()">Disable Youtube</button>  
+            </p>
+              
+          </section>
+    </main>
+          <footer class="footer mt-auto py-3 text-center">
+            <div class="container">
+              <span class="text-muted ">Build with love. 2020 Summer.</span>
+            </div>
+          </footer>
+          <script src="./script.js"></script>
+    </body>
+</html>
