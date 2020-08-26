@@ -1,185 +1,115 @@
-@import url("https://fonts.googleapis.com/css?family=Cabin+Sketch");
-
-html {
-  height: 100%;
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 body {
-  min-height: 100%;
-}
-
-body {
-  display: flex;
-}
-
-h1 {
-  font-family: "Cabin Sketch", cursive;
-  font-size: 3em;
-  text-align: center;
-  opacity: 0.8;
-  order: 1;
-}
-
-h1 small {
-  display: block;
-}
-
-.site {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-  -ms-flex-align: center;
-  align-items: center;
-  flex-direction: column;
-  margin: 0 auto;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-}
-
-.sketch {
-  position: relative;
-  height: 400px;
-  min-width: 400px;
+  padding: 0;
   margin: 0;
-  overflow: visible;
-  order: 2;
 }
 
-.bee-sketch {
-  height: 100%;
-  width: 100%;
+#notfound {
+  position: relative;
+  height: 100vh;
+}
+
+#notfound .notfound {
   position: absolute;
-  top: 0;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.notfound {
+  max-width: 460px;
+  width: 100%;
+  text-align: center;
+  line-height: 1.4;
+}
+
+.notfound .notfound-404 {
+  position: relative;
+  width: 180px;
+  height: 180px;
+  margin: 0px auto 50px;
+}
+
+.notfound .notfound-404>div:first-child {
+  position: absolute;
   left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background: #ffa200;
+  -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
+  border: 5px dashed #000;
+  border-radius: 5px;
 }
 
-.red {
-  background: url(./assets/red-1.png) no-repeat center center;
-  opacity: 1;
-  animation: red 3s linear infinite, opacityRed 5s linear alternate infinite;
+.notfound .notfound-404>div:first-child:before {
+  content: '';
+  position: absolute;
+  left: -5px;
+  right: -5px;
+  bottom: -5px;
+  top: -5px;
+  -webkit-box-shadow: 0px 0px 0px 5px rgba(0, 0, 0, 0.1) inset;
+          box-shadow: 0px 0px 0px 5px rgba(0, 0, 0, 0.1) inset;
+  border-radius: 5px;
 }
 
-.blue {
-  background: url(./assets/blue-1.png) no-repeat center center;
-  opacity: 0;
-  animation: blue 3s linear infinite, opacityBlue 5s linear alternate infinite;
+.notfound .notfound-404 h1 {
+  font-family: 'Cabin', sans-serif;
+  color: #000;
+  font-weight: 700;
+  margin: 0;
+  font-size: 90px;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  left: 50%;
+  text-align: center;
+  height: 40px;
+  line-height: 40px;
 }
 
-@media only screen and (min-width: 780px) {
-  .site {
-    flex-direction: row;
-    padding: 1em 3em 1em 0em;
-  }
-
-  h1 {
-    text-align: right;
-    order: 2;
-    padding-bottom: 2em;
-    padding-left: 2em;
-  }
-
-  .sketch {
-    order: 1;
-  }
+.notfound h2 {
+  font-family: 'Cabin', sans-serif;
+  font-size: 33px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 7px;
 }
 
-@keyframes blue {
-  0% {
-    background-image: url(./assets/blue-1.png);
-  }
-  9.09% {
-    background-image: url(./assets/blue-2.png);
-  }
-  27.27% {
-    background-image: url(./assets/blue-3.png);
-  }
-  36.36% {
-    background-image: url(./assets/blue-4.png);
-  }
-  45.45% {
-    background-image: url(./assets/blue-5.png);
-  }
-  54.54% {
-    background-image: url(./assets/blue-6.png);
-  }
-  63.63% {
-    background-image: url(./assets/blue-7.png);
-  }
-  72.72% {
-    background-image: url(./assets/blue-8.png);
-  }
-  81.81% {
-    background-image: url(./assets/blue-9.png);
-  }
-  100% {
-    background-image: url(./assets/blue-1.png);
-  }
+.notfound p {
+  font-family: 'Cabin', sans-serif;
+  font-size: 16px;
+  color: #000;
+  font-weight: 400;
 }
 
-@keyframes red {
-  0% {
-    background-image: url(./assets/red-1.png);
-  }
-  9.09% {
-    background-image: url(./assets/red-2.png);
-  }
-  27.27% {
-    background-image: url(./assets/red-3.png);
-  }
-  36.36% {
-    background-image: url(./assets/red-4.png);
-  }
-  45.45% {
-    background-image: url(./assets/red-5.png);
-  }
-  54.54% {
-    background-image: url(./assets/red-6.png);
-  }
-  63.63% {
-    background-image: url(./assets/red-7.png);
-  }
-  72.72% {
-    background-image: url(./assets/red-8.png);
-  }
-  81.81% {
-    background-image: url(./assets/red-9.png);
-  }
-  100% {
-    background-image: url(./assets/red-1.png);
-  }
+.notfound a {
+  font-family: 'Cabin', sans-serif;
+  display: inline-block;
+  padding: 10px 25px;
+  background-color: #8f8f8f;
+  border: none;
+  border-radius: 40px;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-decoration: none;
+  -webkit-transition: 0.2s all;
+  transition: 0.2s all;
 }
 
-@keyframes opacityBlue {
-  from {
-    opacity: 0;
-  }
-  25% {
-    opacity: 0;
-  }
-  75% {
-    opacity: 1;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-@keyframes opacityRed {
-  from {
-    opacity: 1;
-  }
-  25% {
-    opacity: 1;
-  }
-  75% {
-    opacity: 0.3;
-  }
-  to {
-    opacity: 0.3;
-  }
+.notfound a:hover {
+  background-color: #2c2c2c;
 }
