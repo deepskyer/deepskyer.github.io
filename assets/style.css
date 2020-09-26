@@ -1,0 +1,27 @@
+.operation-icon-danger {
+  margin-left: 20px;
+  color: #e46e6a;
+}
+
+.operation-icon-danger:hover {
+  color: #d81111;
+}
+
+.logo {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  -webkit-box-shadow: 0px 10px 28px -7px rgba(255, 0, 255, 0.29);
+  -moz-box-shadow: 0px 10px 28px -7px rgba(255, 0, 255, 0.29);
+  box-shadow: 0px 10px 28px -7px rgba(255, 0, 255, 0.29);
+}
+
+.logo:hover {
+  -webkit-box-shadow: 0px 10px 28px -7px rgba(255, 0, 255, 0.44);
+  -moz-box-shadow: 0px 10px 28px -7px rgba(255, 0, 255, 0.44);
+  box-shadow: 0px 10px 28px -7px rgba(255, 0, 255, 0.44);
+}
+
+a:hover {
+  text-decoration: none;
+}
