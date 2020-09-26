@@ -20,7 +20,7 @@ function operateFormatter(value, row, index) {
     '<i class="operation-icon fas fa-cog"></i>',
     "</a>  ",
     '<a class="delete" href="javascript:void(0)" title="delete">',
-    '<i class="operation-icon-danger fas fa-minus-circle"></i>',
+    '<i class="operation-icon-danger fas fa-times"></i>',
     "</a>  ",
   ].join("");
 }
