@@ -47,11 +47,14 @@
             id="table"
             data-toggle="table"
             data-search="true"
+            class="table table-borderless"
             data-url="https://floating-bastion-48526.herokuapp.com/api/tasks/"
           >
             <thead>
               <th data-field="title">Filter Word</th>
-              <th data-field="content">Timelimit</th>
+              <th data-field="content" data-cell-style="cellStyle">
+                Timelimit ( Mins )
+              </th>
               <th
                 data-field="operate"
                 data-formatter="operateFormatter"
@@ -105,6 +108,18 @@
           });
         }
       };
+    </script>
+    <script>
+      function cellStyle(value, row, index) {
+        if (row.rating == 2) {
+          return {
+            classes: "allow",
+          };
+        }
+        return {
+          classes: "block",
+        };
+      }
     </script>
   </body>
 </html>
