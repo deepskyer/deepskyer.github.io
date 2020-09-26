@@ -25,23 +25,23 @@
     <div class="container">
       <div class="page">
         <div class="py-5-new text-center">
-          <div class="d-block mx-auto mb-4 logo">
+          <div class="d-block mx-auto mb-3 logo">
             <a href="/"
               ><img src="./assets/logo.png" height="72" width="72"
             /></a>
           </div>
-          <h5>Direction</h5>
+          <h2>Direction</h2>
         </div>
 
         <div class="row">
           <div class="col-md-4 order-md-2 mb-4">
             <a href="/filters.html">
-              <h4
+              <h5
                 class="d-flex justify-content-between align-items-center mb-3"
               >
                 <span class="text-muted">词库总数</span>
                 <span class="badge badge-purple badge-pill" id="pill">0</span>
-              </h4></a
+              </h5></a
             >
             <ul class="list-group mb-3">
               <li
@@ -50,7 +50,7 @@
                 <div class="text-danger">
                   <a href="/filters.html?type=block">
                     <h6 class="my-0">屏蔽</h6>
-                    <small class="text-muted">正在屏蔽的词汇</small></a
+                    <small class="text-muted">阻止访问</small></a
                   >
                 </div>
                 <span class="text-muted" id="blockcount">0</span>
@@ -58,8 +58,8 @@
               <li class="list-group-item d-flex justify-content-between">
                 <div class="text-success">
                   <a href="/filters.html?type=allow">
-                    <h6 class="my-0 text-success">暂时允许</h6>
-                    <small class="text-muted">有时间限制</small></a
+                    <h6 class="my-0 text-success">允许</h6>
+                    <small class="text-muted">时间限制</small></a
                   >
                 </div>
                 <span id="allowcount" class="text-success">0</span>
@@ -67,7 +67,7 @@
             </ul>
           </div>
           <div class="col-md-8 order-md-1">
-            <h4 class="mb-3">添加屏蔽词</h4>
+            <h5 class="mb-3">添加</h5>
             <form
               class="needs-validation"
               id="new-control"
@@ -75,7 +75,7 @@
             >
               <div class="mb-3">
                 <label for="email"
-                  >词汇 <span class="text-muted">(必须)</span></label
+                  >屏蔽词 <span class="text-muted">(必须)</span></label
                 >
                 <input
                   type="text"
@@ -102,7 +102,9 @@
                   </select>
                 </div>
                 <div class="col-md-6 mb-3">
-                  <label for="timelimit">时间限制(分钟)</label>
+                  <label for="timelimit"
+                    >暂许时长 <span class="text-muted">(分钟)</span></label
+                  >
                   <select
                     class="custom-select d-block w-100"
                     id="timelimit"
