@@ -1,10 +1,22 @@
+.bg-light {
+  background-color: #fff !important;
+}
+
 .operation-icon-danger {
   margin-left: 20px;
-  color: #e46e6a;
+  color: #d81111;
 }
 
 .operation-icon-danger:hover {
-  color: #d81111;
+  color: #b40000;
+}
+
+.operation-icon {
+  color: #797979;
+}
+
+.operation-icon:hover {
+  color: #2e2e2e;
 }
 
 .logo {
@@ -24,4 +36,59 @@
 
 a:hover {
   text-decoration: none;
+}
+
+.allow {
+  background-color: #7ed450;
+  width: 60%;
+  border: none;
+  padding: 4px 6px !important;
+  color: #fff;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin: 12px 0px;
+  border-radius: 32px;
+}
+
+.block {
+  background: linear-gradient(-45deg, #ffa63d, #ff3d77, #338aff, #3cf0c5);
+  background-size: 600%;
+  -webkit-animation: anime 16s linear infinite;
+  animation: anime 16s linear infinite;
+  width: 60%;
+  color: #fff;
+  padding: 4px 6px !important;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin: 12px 0px;
+  border-radius: 32px;
+}
+
+@-webkit-keyframes anime {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+@keyframes anime {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.table {
+  border: none;
 }
