@@ -1,12 +1,15 @@
 window.addEventListener("load", function (event) {
-  var search = document.getElementsByClassName("search");
-  var searchstyle = search[0];
-  //float-right search btn-group
-  if (searchstyle != null)
-    searchstyle.classList.remove("float-right", "btn-group");
-  var control = document.getElementsByClassName("form-control");
-  var control = control[0];
-  control.classList.add("d-search");
+  var searchs = document.getElementsByClassName("search");
+  for (let index = 0; index < searchs.length; index++) {
+    const element = searchs[index];
+    element.classList.remove("float-right");
+    element.classList.remove("btn-group");
+    alert("remove float right");
+  }
+
+  //   var control = document.getElementsByClassName("form-control");
+  //   var control = control[0];
+  //   control.classList.add("d-search");
 
   var selects = document.getElementsByClassName("custom-select");
   for (let index = 0; index < selects.length; index++) {
