@@ -23,112 +23,118 @@
   </head>
   <body class="bg-light">
     <div class="container">
-      <div class="py-5 text-center">
-        <div class="d-block mx-auto mb-4 logo">
-          <a href="/"><img src="./assets/logo.png" height="72" width="72" /></a>
+      <div class="page">
+        <div class="py-5-new text-center">
+          <div class="d-block mx-auto mb-4 logo">
+            <a href="/"
+              ><img src="./assets/logo.png" height="72" width="72"
+            /></a>
+          </div>
+          <h2>Direction</h2>
+          <p class="lead">让孩子安全上网</p>
         </div>
-        <h2>Direction</h2>
-        <p class="lead">让孩子安全上网</p>
-      </div>
 
-      <div class="row">
-        <div class="col-md-4 order-md-2 mb-4">
-          <a href="/filters.html">
-            <h4 class="d-flex justify-content-between align-items-center mb-3">
-              <span class="text-muted">屏蔽词库总数</span>
-              <span class="badge badge-danger badge-pill" id="pill">0</span>
-            </h4></a
-          >
-          <ul class="list-group mb-3">
-            <li
-              class="list-group-item d-flex justify-content-between lh-condensed"
-            >
-              <div class="text-danger">
-                <a href="/filters.html?type=block">
-                  <h6 class="my-0 text-danger">屏蔽</h6>
-                  <small class="text-muted">已经屏蔽的词汇</small></a
-                >
-              </div>
-              <span class="text-muted" id="blockcount">0</span>
-            </li>
-            <li class="list-group-item d-flex justify-content-between bg-light">
-              <div class="text-success">
-                <a href="/filters.html?type=allow">
-                  <h6 class="my-0 text-success">暂时允许</h6>
-                  <small class="text-muted">有时间限制</small></a
-                >
-              </div>
-              <span id="allowcount" class="text-success">0</span>
-            </li>
-          </ul>
-        </div>
-        <div class="col-md-8 order-md-1">
-          <h4 class="mb-3">添加需要屏蔽的词汇</h4>
-          <form
-            class="needs-validation"
-            id="new-control"
-            onsubmit="setTimeout(function () { window.location.reload(); }, 10)"
-          >
-            <div class="mb-3">
-              <label for="email"
-                >词汇 <span class="text-muted">(必须)</span></label
+        <div class="row">
+          <div class="col-md-4 order-md-2 mb-4">
+            <a href="/filters.html">
+              <h4
+                class="d-flex justify-content-between align-items-center mb-3"
               >
-              <input
-                type="text"
-                id="filter-word"
-                class="form-control"
-                placeholder="例如 youtube"
-                required
-              />
-              <div class="invalid-feedback">请填写屏蔽词汇</div>
-            </div>
-
-            <div class="row">
-              <div class="col-md-6 mb-3">
-                <label for="status">控制类型</label>
-                <select
-                  class="custom-select d-block w-100"
-                  required="true"
-                  id="status"
-                  onchange="witness();"
+                <span class="text-muted">词库总数</span>
+                <span class="badge badge-purple badge-pill" id="pill">0</span>
+              </h4></a
+            >
+            <ul class="list-group mb-3">
+              <li
+                class="list-group-item d-flex justify-content-between lh-condensed"
+              >
+                <div class="text-danger">
+                  <a href="/filters.html?type=block">
+                    <h6 class="my-0">屏蔽</h6>
+                    <small class="text-muted">正在屏蔽的词汇</small></a
+                  >
+                </div>
+                <span class="text-muted" id="blockcount">0</span>
+              </li>
+              <li class="list-group-item d-flex justify-content-between">
+                <div class="text-success">
+                  <a href="/filters.html?type=allow">
+                    <h6 class="my-0 text-success">暂时允许</h6>
+                    <small class="text-muted">有时间限制</small></a
+                  >
+                </div>
+                <span id="allowcount" class="text-success">0</span>
+              </li>
+            </ul>
+          </div>
+          <div class="col-md-8 order-md-1">
+            <h4 class="mb-3">添加屏蔽词</h4>
+            <form
+              class="needs-validation"
+              id="new-control"
+              onsubmit="setTimeout(function () { window.location.reload(); }, 10)"
+            >
+              <div class="mb-3">
+                <label for="email"
+                  >词汇 <span class="text-muted">(必须)</span></label
                 >
-                  <option value="">选择</option>
-                  <option>Block</option>
-                  <option>Allow</option>
-                </select>
-              </div>
-              <div class="col-md-6 mb-3">
-                <label for="timelimit">时间限制(分钟)</label>
-                <select
-                  class="custom-select d-block w-100"
-                  id="timelimit"
-                  disabled="disabled"
+                <input
+                  type="text"
+                  id="filter-word"
+                  class="form-control"
+                  placeholder="例如 youtube"
                   required
-                >
-                  <option value="">选择</option>
-                  <option>10</option>
-                  <option>15</option>
-                  <option>20</option>
-                  <option>30</option>
-                </select>
+                />
+                <div class="invalid-feedback">请填写屏蔽词汇</div>
               </div>
-            </div>
-            <hr class="mb-4" />
-            <button class="btn btn-primary btn-lg btn-block" type="submit">
-              添加
-            </button>
-          </form>
-        </div>
-      </div>
 
-      <footer class="my-5 pt-5 text-muted text-center text-small">
-        <p class="mb-1">© 2020 Direction</p>
-        <ul class="list-inline">
-          <li class="list-inline-item"><a href="#">Privacy</a></li>
-          <li class="list-inline-item"><a href="#">Terms</a></li>
-          <li class="list-inline-item"><a href="#">Support</a></li>
-        </ul>
-      </footer>
+              <div class="row">
+                <div class="col-md-6 mb-3">
+                  <label for="status">控制类型</label>
+                  <select
+                    class="custom-select d-block w-100"
+                    required="true"
+                    id="status"
+                    onchange="witness();"
+                  >
+                    <option value="">选择</option>
+                    <option>Block</option>
+                    <option>Allow</option>
+                  </select>
+                </div>
+                <div class="col-md-6 mb-3">
+                  <label for="timelimit">时间限制(分钟)</label>
+                  <select
+                    class="custom-select d-block w-100"
+                    id="timelimit"
+                    disabled="disabled"
+                    required
+                  >
+                    <option value="">选择</option>
+                    <option>10</option>
+                    <option>15</option>
+                    <option>20</option>
+                    <option>30</option>
+                  </select>
+                </div>
+              </div>
+              <hr class="mb-4" />
+              <button class="btn btn-primary btn-lg btn-block" type="submit">
+                添加
+              </button>
+            </form>
+          </div>
+        </div>
+
+        <footer class="my-5 pt-5 text-muted text-center text-small">
+          <p class="mb-1">© 2020 Direction</p>
+          <ul class="list-inline">
+            <li class="list-inline-item"><a href="#">Privacy</a></li>
+            <li class="list-inline-item"><a href="#">Terms</a></li>
+            <li class="list-inline-item"><a href="#">Support</a></li>
+          </ul>
+        </footer>
+      </div>
     </div>
 
     <script
@@ -149,5 +155,6 @@
     <script src="./assets/selection.js"></script>
     <script src="./assets/content.js"></script>
     <script src="./assets/submit.js"></script>
+    <script src="./assets/styles.js"></script>
   </body>
 </html>

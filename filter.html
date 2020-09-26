@@ -23,80 +23,84 @@
   </head>
   <body class="bg-light">
     <div class="container">
-      <div class="py-5 text-center">
-        <div class="d-block mx-auto mb-4 logo">
-          <a href="/"><img src="./assets/logo.png" height="72" width="72" /></a>
+      <div class="page">
+        <div class="py-5-new text-center">
+          <div class="d-block mx-auto mb-4 logo">
+            <a href="/"
+              ><img src="./assets/logo.png" height="72" width="72"
+            /></a>
+          </div>
+          <h2>Direction</h2>
+          <p class="lead">让孩子安全上网</p>
         </div>
-        <h2>Direction</h2>
-        <p class="lead">让孩子安全上网</p>
-      </div>
 
-      <div class="row">
-        <div class="col-md-12 order-md-1">
-          <h4 class="mb-3">更改屏蔽词设置</h4>
-          <form
-            class="needs-validation update"
-            id="new-control"
-            onsubmit="setTimeout(function () { window.location='/'; }, 10)"
-          >
-            <div class="mb-3">
-              <label>屏蔽词 <span class="text-muted">(必须)</span></label>
-              <input
-                type="text"
-                id="filter-word"
-                class="form-control"
-                placeholder="youtube.com"
-                required
-              />
-              <div class="invalid-feedback">请输入屏蔽词。</div>
-            </div>
-
-            <div class="row">
-              <div class="col-md-6 mb-3">
-                <label for="status">控制类型</label>
-                <select
-                  class="custom-select d-block w-100"
-                  required="true"
-                  id="status"
-                  onchange="witness();"
-                >
-                  <option value="">选择</option>
-                  <option>Block</option>
-                  <option>Allow</option>
-                </select>
-              </div>
-              <div class="col-md-6 mb-3">
-                <label for="timelimit">时间限制（分钟）</label>
-                <select
-                  class="custom-select d-block w-100"
-                  id="timelimit"
-                  disabled="disabled"
+        <div class="row">
+          <div class="col-md-12 order-md-1">
+            <h4 class="mb-3">更改设置</h4>
+            <form
+              class="needs-validation update"
+              id="new-control"
+              onsubmit="setTimeout(function () { window.location='/'; }, 10)"
+            >
+              <div class="mb-3">
+                <label>屏蔽词 <span class="text-muted"></span></label>
+                <input
+                  type="text"
+                  id="filter-word"
+                  class="form-control"
+                  placeholder="youtube.com"
                   required
-                >
-                  <option value="">Choose</option>
-                  <option>10</option>
-                  <option>15</option>
-                  <option>20</option>
-                  <option>30</option>
-                </select>
+                />
+                <div class="invalid-feedback">请输入屏蔽词。</div>
               </div>
-            </div>
-            <hr class="mb-4" />
-            <button class="btn btn-primary btn-lg btn-block" type="submit">
-              更新
-            </button>
-          </form>
-        </div>
-      </div>
 
-      <footer class="my-5 pt-5 text-muted text-center text-small">
-        <p class="mb-1">© 2020 Direction</p>
-        <ul class="list-inline">
-          <li class="list-inline-item"><a href="#">Privacy</a></li>
-          <li class="list-inline-item"><a href="#">Terms</a></li>
-          <li class="list-inline-item"><a href="#">Support</a></li>
-        </ul>
-      </footer>
+              <div class="row">
+                <div class="col-md-6 mb-3">
+                  <label for="status">控制类型</label>
+                  <select
+                    class="custom-select d-block w-100"
+                    required="true"
+                    id="status"
+                    onchange="witness();"
+                  >
+                    <option value="">选择</option>
+                    <option>Block</option>
+                    <option>Allow</option>
+                  </select>
+                </div>
+                <div class="col-md-6 mb-3">
+                  <label for="timelimit">时间限制（分钟）</label>
+                  <select
+                    class="custom-select d-block w-100"
+                    id="timelimit"
+                    disabled="disabled"
+                    required
+                  >
+                    <option value="">Choose</option>
+                    <option>10</option>
+                    <option>15</option>
+                    <option>20</option>
+                    <option>30</option>
+                  </select>
+                </div>
+              </div>
+              <hr class="mb-4" />
+              <button class="btn btn-primary btn-lg btn-block" type="submit">
+                更新
+              </button>
+            </form>
+          </div>
+        </div>
+
+        <footer class="my-5 pt-5 text-muted text-center text-small">
+          <p class="mb-1">© 2020 Direction</p>
+          <ul class="list-inline">
+            <li class="list-inline-item"><a href="#">Privacy</a></li>
+            <li class="list-inline-item"><a href="#">Terms</a></li>
+            <li class="list-inline-item"><a href="#">Support</a></li>
+          </ul>
+        </footer>
+      </div>
     </div>
 
     <script
@@ -116,5 +120,6 @@
     ></script>
     <script src="./assets/selection.js"></script>
     <script src="./assets/edit.js"></script>
+    <script src="./assets/styles.js"></script>
   </body>
 </html>
