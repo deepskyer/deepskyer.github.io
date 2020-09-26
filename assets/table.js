@@ -1,16 +1,16 @@
-fetch("https://floating-bastion-48526.herokuapp.com/api/tasks/")
-  .then((res) => res.json())
-  .then((result) => {
-    for (let index = 0; index < result.length; index++) {
-      const website = result[index];
-      console.log(
-        "https://floating-bastion-48526.herokuapp.com/api/tasks/" + website._id
-      );
-      console.log(website.title);
-      console.log(website.content);
-      console.log(website.rating);
-    }
-  });
+// fetch("https://floating-bastion-48526.herokuapp.com/api/tasks/")
+//   .then((res) => res.json())
+//   .then((result) => {
+//     for (let index = 0; index < result.length; index++) {
+//       const website = result[index];
+//       // console.log(
+//       //   "https://floating-bastion-48526.herokuapp.com/api/tasks/" + website._id
+//       // );
+//       // console.log(website.title);
+//       // console.log(website.content);
+//       // console.log(website.rating);
+//     }
+//   });
 
 var $table = $("#table");
 
@@ -20,7 +20,7 @@ function operateFormatter(value, row, index) {
     '<i class="operation-icon fas fa-cog"></i>',
     "</a>  ",
     '<a class="delete" href="javascript:void(0)" title="delete">',
-    '<i class="operation-icon-danger fas fa-times"></i>',
+    '<i class="operation-icon-danger fas fa-minus-circle"></i>',
     "</a>  ",
   ].join("");
 }

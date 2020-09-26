@@ -43,5 +43,5 @@ document
         rating: type.options[type.selectedIndex].value == "Allow" ? 2 : 3,
       }),
     });
-    alert("Submitted update");
+    alert(word.value + "的设置已经更新");
   });

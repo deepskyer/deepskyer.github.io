@@ -1,22 +1,49 @@
-.bg-light {
-  background-color: #fff !important;
+/* .bg-light {
+  background-color: #fafafa !important;
+} */
+
+.list-group-item {
+  border: 0px solid rgba(0, 0, 0, 0.125);
 }
 
+.page {
+  padding-left: 20px;
+  padding-right: 20px;
+}
 .operation-icon-danger {
   margin-left: 20px;
-  color: #d81111;
+  color: #b1b1b1;
+}
+
+.badge-purple {
+  color: #fff;
+  background-color: #b9b9b9;
+}
+
+.th-inner {
+  transition: all 200ms ease;
+  color: #6e6d7a;
+  font-weight: 400;
+  font-size: 14px;
+  font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial,
+    sans-serif;
 }
 
 .operation-icon-danger:hover {
-  color: #b40000;
-}
-
-.operation-icon {
   color: #797979;
 }
 
+.operation-icon {
+  color: #b1b1b1;
+}
+
 .operation-icon:hover {
-  color: #2e2e2e;
+  color: #797979;
+}
+
+.py-5-new {
+  padding-top: 2rem;
+  padding-bottom: 1rem;
 }
 
 .logo {
@@ -29,6 +56,41 @@
 }
 
 .logo:hover {
+  -webkit-box-shadow: 0px 10px 28px -7px rgba(255, 0, 255, 0.44);
+  -moz-box-shadow: 0px 10px 28px -7px rgba(255, 0, 255, 0.44);
+  box-shadow: 0px 10px 28px -7px rgba(255, 0, 255, 0.44);
+}
+
+.list-group {
+  border-radius: 12px;
+  -webkit-box-shadow: 0px 6px 24px 4px rgba(0, 0, 0, 0.11);
+  -moz-box-shadow: 0px 6px 24px 4px rgba(0, 0, 0, 0.11);
+  box-shadow: 0px 6px 24px 4px rgba(0, 0, 0, 0.11);
+}
+
+.btn {
+  border-radius: 32px;
+}
+
+.btn-primary {
+  background: rgb(161, 63, 251);
+  background: -moz-linear-gradient(
+    128deg,
+    rgba(161, 63, 251, 1) 0%,
+    rgba(252, 70, 184, 1) 100%
+  );
+  background: -webkit-linear-gradient(
+    128deg,
+    rgba(161, 63, 251, 1) 0%,
+    rgba(252, 70, 184, 1) 100%
+  );
+  background: linear-gradient(
+    128deg,
+    rgba(161, 63, 251, 1) 0%,
+    rgba(252, 70, 184, 1) 100%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#a13ffb",endColorstr="#fc46b8",GradientType=1);
+  border: 0px;
   -webkit-box-shadow: 0px 10px 28px -7px rgba(255, 0, 255, 0.44);
   -moz-box-shadow: 0px 10px 28px -7px rgba(255, 0, 255, 0.44);
   box-shadow: 0px 10px 28px -7px rgba(255, 0, 255, 0.44);
@@ -91,4 +153,28 @@ a:hover {
 
 .table {
   border: none;
+}
+
+.d-search {
+  display: block;
+  width: 100%;
+  height: calc(1.5em + 0.75rem + 2px);
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #495057;
+  background-color: #f1f1f1;
+  background-clip: padding-box;
+  border: 0px solid #ced4da;
+  border-radius: 12px;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.d-select {
+  border: 1px solid #f1f1f1;
+  border-radius: 12px;
+  background: #fff
+    url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='4' height='5' viewBox='0 0 4 5'%3e%3cpath fill='%23cfcfcf' d='M2 0L0 2h4zm0 5L0 3h4z'/%3e%3c/svg%3e")
+    no-repeat right 0.75rem center/8px 10px;
 }
