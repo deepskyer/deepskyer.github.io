@@ -1,17 +1,3 @@
-// fetch("https://floating-bastion-48526.herokuapp.com/api/tasks/")
-//   .then((res) => res.json())
-//   .then((result) => {
-//     for (let index = 0; index < result.length; index++) {
-//       const website = result[index];
-//       // console.log(
-//       //   "https://floating-bastion-48526.herokuapp.com/api/tasks/" + website._id
-//       // );
-//       // console.log(website.title);
-//       // console.log(website.content);
-//       // console.log(website.rating);
-//     }
-//   });
-
 var $table = $("#table");
 
 function operateFormatter(value, row, index) {

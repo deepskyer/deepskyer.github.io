@@ -12,7 +12,7 @@
 }
 .operation-icon-danger {
   margin-left: 20px;
-  color: #b1b1b1;
+  color: #ec0000;
 }
 
 .badge-purple {
@@ -30,7 +30,7 @@
 }
 
 .operation-icon-danger:hover {
-  color: #797979;
+  color: #c90101;
 }
 
 .operation-icon {
@@ -178,4 +178,10 @@ a:hover {
   background: #fff
     url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='4' height='5' viewBox='0 0 4 5'%3e%3cpath fill='%23cfcfcf' d='M2 0L0 2h4zm0 5L0 3h4z'/%3e%3c/svg%3e")
     no-repeat right 0.75rem center/8px 10px;
+}
+
+.name {
+  font-family: "Pacifico", cursive;
+  color: #370672;
+  font-size: 24px;
 }

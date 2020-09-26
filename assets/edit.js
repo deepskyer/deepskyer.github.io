@@ -23,13 +23,10 @@ document
     //prevent the normal submission of the form
     e.preventDefault();
 
-    console.log(word.value);
-
     var content =
       type.options[type.selectedIndex].value == "Block"
         ? "0"
         : time.options[time.selectedIndex].value;
-    console.log(content);
 
     fetch("https://floating-bastion-48526.herokuapp.com/api/tasks/" + id, {
       method: "PUT",
