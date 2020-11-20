@@ -115,11 +115,11 @@ a:hover {
 }
 
 .block {
-  background-color: #414141;
+  background-color: #e6161625;
   width: 60%;
   border: none;
   padding: 4px 6px !important;
-  color: #fff;
+  color: #970000;
   text-align: center;
   text-decoration: none;
   display: inline-block;
@@ -128,7 +128,7 @@ a:hover {
 }
 
 .monitor {
-  background-color: #2293f0;
+  background-color: #18beff;
   width: 60%;
   border: none;
   padding: 4px 6px !important;
