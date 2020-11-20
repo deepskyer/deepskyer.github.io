@@ -127,6 +127,11 @@
             classes: "allow",
           };
         }
+        if (row.content != 0) {
+          return {
+            classes: "monitor",
+          };
+        }
         return {
           classes: "block",
         };
