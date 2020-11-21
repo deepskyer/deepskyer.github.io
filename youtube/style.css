@@ -2,7 +2,7 @@ body {
   margin: 0;
   font-family: Arial;
   font-size: 5em;
-  background-color: #ffffff;
+  background-color: #000;
 }
 
 .box {
@@ -13,27 +13,27 @@ body {
 }
 
 .tweets {
-  color: #12610f;
-  background-color: #a7f1a723;
+  color: #6cbe00;
+  background-color: #dadada2d;
   margin: 20px 0 20px 20px;
   border-radius: 38px;
 }
 .replies {
-  color: #1c6996;
-  background-color: #e9e5111a;
+  color: #2ba5ec;
+  background-color: #dadada2d;
   margin: 20px 20px 20px 20px;
   border-radius: 38px;
 }
 .search {
-  color: #6d1a5f;
+  color: #f4f80c;
   margin: 20px 0 20px 20px;
-  background-color: #02b5bb10;
+  background-color: #dadada2d;
   border-radius: 38px;
 }
 .messages {
-  color: #f10000;
+  color: #c45c5c;
   margin: 20px 20px 20px 20px;
-  background-color: #ff808015;
+  background-color: #dadada2d;
   border-radius: 38px;
 }
 
@@ -45,11 +45,11 @@ body {
 }
 
 span {
-  color: black;
+  color: rgb(199, 199, 199);
   font-size: 50px;
   padding: 25px 0 10px 0;
   display: block;
   text-transform: uppercase;
-  font-family: "Josefin Sans";
+  font-family: "-apple-system", "HelveticaNeue";
   letter-spacing: 1px;
 }
