@@ -9,32 +9,57 @@ body {
   padding-top: 5em;
   font-size: 80px;
   text-align: center;
-  background-color: #efefef;
+  background-color: #dadada18;
+  border-radius: 38px;
+}
+
+.box:hover {
+  -webkit-animation: fade 3s ease-in-out;
+  -moz-animation: fade 3s ease-in-out;
+  -o-animation: fade 3s ease-in-out;
+  animation: fade 3s ease-in-out;
+}
+
+@-webkit-keyframes fade {
+  from {
+    background: #dadada3f;
+  }
+  to {
+    background: #dadada18;
+  }
+}
+@-moz-keyframes fade {
+  from {
+    background: #dadada3f;
+  }
+  to {
+    background: #dadada18;
+  }
+}
+@keyframes fade {
+  from {
+    background: #dadada3f;
+  }
+  to {
+    background: #dadada18;
+  }
 }
 
 .tweets {
   color: #6cbe00;
-  background-color: #dadada2d;
   margin: 20px 0 20px 20px;
-  border-radius: 38px;
 }
 .replies {
   color: #2ba5ec;
-  background-color: #dadada2d;
   margin: 20px 20px 20px 20px;
-  border-radius: 38px;
 }
 .search {
   color: #f4f80c;
   margin: 0px 0 60px 20px;
-  background-color: #dadada2d;
-  border-radius: 38px;
 }
 .messages {
   color: #c45c5c;
   margin: 0px 20px 60px 20px;
-  background-color: #dadada2d;
-  border-radius: 38px;
 }
 
 /* Our Grid Code */
