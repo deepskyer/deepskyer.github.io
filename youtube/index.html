@@ -3,9 +3,10 @@
     <link rel="stylesheet" href="style.css" />
     <meta name="apple-mobile-web-app-title" content="KidsControl" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
+    <script src="./gsap.js"></script>
     <link rel="apple-touch-icon" href="custom_icon.png" />
-    <link rel="apple-touch-startup-image"
-      media="screen and (device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)" href="splash.png"> 
+    <link rel="apple-touch-startup-image" href="splash.png" />
+    <link rel="apple-touch-startup-image" sizes="1125x2436" href="splash.png" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
@@ -35,5 +36,14 @@
       </div>
     </div>
     <script src="./script.js"></script>
+    <script>
+      gsap.from(".box", {
+        opacity: 0,
+        duration: 1,
+        y: -50,
+        ease: "Power2.easeInOut",
+        stagger: 0.18,
+      });
+    </script>
   </body>
 </html>
