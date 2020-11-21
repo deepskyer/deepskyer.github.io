@@ -26,13 +26,13 @@ body {
 }
 .search {
   color: #f4f80c;
-  margin: 20px 0 20px 20px;
+  margin: 0px 0 60px 20px;
   background-color: #dadada2d;
   border-radius: 38px;
 }
 .messages {
   color: #c45c5c;
-  margin: 20px 20px 20px 20px;
+  margin: 0px 20px 60px 20px;
   background-color: #dadada2d;
   border-radius: 38px;
 }
