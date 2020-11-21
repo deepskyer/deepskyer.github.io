@@ -1,26 +1,55 @@
 body {
-    margin: 0;
-    font-family: Arial;
-    font-size: 5em;
-    background-color: #f2f2f2;
+  margin: 0;
+  font-family: Arial;
+  font-size: 5em;
+  background-color: #ffffff;
+}
 
-  }
-  
-  .box {
-    color: #fff;
-    padding-top: 5em;
-    text-align: center;
-    background-color: #efefef;
-  }
-  
-  .tweets   { background-color: #A2DED0; }
-  .replies  { background-color: #F4D03F; }
-  .search   { background-color: #59ABE3; }
-  .messages { background-color: #FF7400; }
-  
-  /* Our Grid Code */
-  .app-layout {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 50vh 50vh;
-  }
+.box {
+  padding-top: 5em;
+  font-size: 80px;
+  text-align: center;
+  background-color: #efefef;
+}
+
+.tweets {
+  color: #12610f;
+  background-color: #a7f1a723;
+  margin: 20px 0 20px 20px;
+  border-radius: 38px;
+}
+.replies {
+  color: #1c6996;
+  background-color: #e9e5111a;
+  margin: 20px 20px 20px 20px;
+  border-radius: 38px;
+}
+.search {
+  color: #6d1a5f;
+  margin: 20px 0 20px 20px;
+  background-color: #02b5bb10;
+  border-radius: 38px;
+}
+.messages {
+  color: #f10000;
+  margin: 20px 20px 20px 20px;
+  background-color: #ff808015;
+  border-radius: 38px;
+}
+
+/* Our Grid Code */
+.app-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 50vh 50vh;
+}
+
+span {
+  color: black;
+  font-size: 50px;
+  padding: 25px 0 10px 0;
+  display: block;
+  text-transform: uppercase;
+  font-family: "Josefin Sans";
+  letter-spacing: 1px;
+}
