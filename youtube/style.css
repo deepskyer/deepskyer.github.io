@@ -5,8 +5,33 @@ body {
   background-color: #000;
 }
 
+.banner {
+  display: flex;
+  padding: 0 50px;
+  line-height: 30px;
+  margin-left: 20px;
+  margin-top: 80px;
+  margin-bottom: -200px;
+  color: #fff;
+
+  border-radius: 38px;
+  font-size: 80px;
+  align-items: baseline;
+}
+
+.icon {
+  color: #ff0000;
+  font-size: 60px;
+}
+
+h4 {
+  padding-left: 30px;
+  font-family: "Open Sans Condensed", sans-serif;
+  font-size: 60px;
+}
+
 .box {
-  padding-top: 5em;
+  padding-top: 300px;
   font-size: 80px;
   text-align: center;
   background-color: #dadada18;
@@ -47,19 +72,19 @@ body {
 
 .tweets {
   color: #6cbe00;
-  margin: 20px 0 20px 20px;
+  margin: 300px 0 20px 20px;
 }
 .replies {
   color: #2ba5ec;
-  margin: 20px 20px 20px 20px;
+  margin: 300px 20px 20px 20px;
 }
 .search {
   color: #f4f80c;
-  margin: 0px 0 60px 20px;
+  margin: 0px 0 300px 20px;
 }
 .messages {
   color: #c45c5c;
-  margin: 0px 20px 60px 20px;
+  margin: 0px 20px 300px 20px;
 }
 
 /* Our Grid Code */
