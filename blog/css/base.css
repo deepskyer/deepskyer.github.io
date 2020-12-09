@@ -1,0 +1,72 @@
+html {
+  font-family: $font-family;
+}
+html::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+html::-webkit-scrollbar-thumb {
+  height: 40px;
+  background-color: #eee;
+  border-radius: 16px;
+}
+html::-webkit-scrollbar-thumb:hover {
+  background-color: #ddd;
+}
+body {
+  font-size: 11pt;
+  font-weight: normal;
+  line-height: 1.7em;
+  background-color: $light-background-color;
+  color: $light-font-color;
+  transition: color 0.2s ease, border-color 0.2s ease, background 0.2s ease, opacity 0.2s ease;
+  background: #3f5efb;
+  background: -moz-radial-gradient(circle, #3f5efb 0%, #fc466b 100%);
+  background: -webkit-radial-gradient(circle, #3f5efb 0%, #fc466b 100%);
+  background: radial-gradient(circle, #3f5efb 0%, #fc466b 100%);
+  filter: progid;
+}
+body :DXImageTransform.Microsoft.gradient(startColorstr="#833ab4",
+body endColorstr="#fcb045",
+body GradientType=1),
+body:before {
+  content: "";
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 0.05;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+body.dark-theme {
+  background: #12242e;
+  background: -moz-linear-gradient(180deg, #12242e 0%, #19588a 57%, #0d415c 100%);
+  background: -webkit-linear-gradient(180deg, #12242e 0%, #19588a 57%, #0d415c 100%);
+  background: linear-gradient(180deg, #12242e 0%, #19588a 57%, #0d415c 100%);
+  color: $dark-font-color;
+  transition: color 0.2s ease, border-color 0.2s ease, background 0.2s ease, opacity 0.2s ease;
+}
+a {
+  color: $light-global-link-color;
+  text-decoration: none;
+  transition: color 0.2s ease, border-color 0.2s ease, background 0.2s ease, opacity 0.2s ease;
+  cursor: pointer;
+}
+a:hover {
+  color: $light-global-link-hover-color;
+  text-decoration: none;
+  transition: color 0.2s ease, border-color 0.2s ease, background 0.2s ease, opacity 0.2s ease;
+}
+.dark-theme a {
+  color: $dark-global-link-color;
+  text-decoration: none;
+  transition: color 0.2s ease, border-color 0.2s ease, background 0.2s ease, opacity 0.2s ease;
+}
+.dark-theme a:hover {
+  color: $dark-global-link-hover-color;
+  text-decoration: none;
+  transition: color 0.2s ease, border-color 0.2s ease, background 0.2s ease, opacity 0.2s ease;
+}

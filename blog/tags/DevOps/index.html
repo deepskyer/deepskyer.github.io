@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <meta name="author" content="年久失修">
+
+
+    <meta name="subtitle" content="neglected">
+
+
+
+
+<title>年久失修&#39;s blog | Tag: DevOps</title>
+
+
+
+    <link rel="icon" href="/favicon.ico">
+
+
+<link href="https://fonts.googleapis.com/css?family=Cairo:300,400,700|Droid+Sans+Mono|Roboto+Mono" rel="stylesheet">
+
+
+
+    <!-- stylesheets list from _config.yml -->
+    
+    <link rel="stylesheet" href="/css/style.css">
+    
+
+
+
+
+    <!-- scripts list from _config.yml -->
+    
+    <script src="/js/script.js"></script>
+    
+    <script src="/js/tocbot.min.js"></script>
+    
+    <script src="/js/chart.js"></script>
+    
+    <script src="/js/gsap.js"></script>
+    
+
+
+
+
+    
+    
+        
+    
+
+
+<meta name="generator" content="Hexo 4.2.1"></head>
+<body>
+    <div class="wrapper">
+        <header>
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-header header-logo"><a href="/">年久失修的blog</a></div>
+            <div class="menu navbar-right">
+                
+                    <a class="menu-item" href="/archives">Archives</a>
+                
+                    <a class="menu-item" href="/category">Category</a>
+                
+                    <a class="menu-item" href="/tag">Tag</a>
+                
+                    <a class="menu-item" href="/about">About</a>
+                
+                <input id="switch_default" type="checkbox" class="switch_default">
+                <label for="switch_default" class="toggleBtn"></label>
+            </div>
+        </div>
+    </nav>
+
+    
+    <nav class="navbar-mobile" id="nav-mobile">
+        <div class="container">
+            <div class="navbar-header">
+                <div>
+                    <a href="/">年久失修的blog</a><a id="mobile-toggle-theme">·&nbsp;Light</a>
+                </div>
+                <div class="menu-toggle" onclick="mobileBtn()">&#9776; Menu</div>
+            </div>
+            <div class="menu" id="mobile-menu">
+                
+                    <a class="menu-item" href="/archives">Archives</a>
+                
+                    <a class="menu-item" href="/category">Category</a>
+                
+                    <a class="menu-item" href="/tag">Tag</a>
+                
+                    <a class="menu-item" href="/about">About</a>
+                
+            </div>
+        </div>
+    </nav>
+
+</header>
+
+        <div class="main">
+            
+
+    
+<div class="container">
+    <div class="post-wrap tags">
+        <div class="traffic-red" onClick="goList()"></div>
+        <div class="traffic-yellow"></div>
+        <div class="traffic-green"></div>
+        <h2 class="post-title">-&nbsp;Tag&nbsp;·&nbsp;DevOps-</h2>
+    </div>
+    <div class="container">
+<div class="post-wrap archive">
+    <div class="traffic-red" onClick="gohome()"></div>
+    <div class="traffic-yellow"></div>
+    <div class="traffic-green"></div>
+    
+    
+        
+
+        
+            <h3>2020</h3>
+        
+
+        <article class="archive-item">
+            <a class="archive-item-link" href="/2020/07/08/20200708/">用DevOps发布一篇博文是一种怎样的体验</a>
+            <span class="archive-item-date">July 8, 2020</span>
+        </article>
+    
+    
+</div>
+</div>
+</div>
+
+        </div>
+        <div class="dock">
+    <ul id="dock">
+        <li class="dropzone" draggable="true" id="finder">
+            <a href="javascript:delay('/category', finder)">    
+                <em><span>Finder</span></em>
+                <img src="/image/finder.png" alt="Finder" />
+            </a>
+            <span class="indicator"></span>
+        </li>
+        <li class="dropzone" draggable="true" id="tag">
+            <a href="javascript:delay('/tag', tag)">    
+                <em><span>Tag</span></em>
+                <img src="/image/tag.png" alt="Tag" />
+            </a>
+            <span class="indicator"></span>
+        </li>
+        <li class="dropzone" draggable="true" id="archive">
+            <a href="javascript:delay('/archives', archive)">
+                <em><span>Archive</span></em>
+                <img src="/image/list.png" alt="Archive" />
+            </a>
+            <span class="indicator"></span>
+        </li>
+
+        <li class="dropzone" draggable="true" id="category">
+            <a href="javascript:delay('/categories/涂鸦/', category)">    
+                <em><span>Preview</span></em>
+                <img src="/image/category.png" alt="Category" />
+            </a>
+            <span class="indicator"></span>
+        </li>
+
+        <li class="dropzone" draggable="true" id="about">
+            <a href="javascript:delay('/about', about)"> 
+                <em><span>About</span></em>
+                <img src="/image/about.png" alt="About" />
+            </a>
+            <span class="indicator"></span>
+        </li>
+
+    </ul>
+</div>
+<script>
+    function delay (URL, icon_name) {
+        icon_name.classList.add("ani");
+        setTimeout( function() { window.location = URL }, 1800 );
+        }
+</script>
+
+<script>
+
+var dragSrcEl = null;
+
+function handleDragStart(e) {
+  // Target (this) element is the source node.
+  dragSrcEl = this;
+
+  e.dataTransfer.effectAllowed = 'move';
+  e.dataTransfer.setData('text/html', this.outerHTML);
+
+  this.classList.add('dragElem');
+}
+function handleDragOver(e) {
+  if (e.preventDefault) {
+    e.preventDefault(); // Necessary. Allows us to drop.
+  }
+  this.classList.add('over');
+
+  e.dataTransfer.dropEffect = 'move';  // See the section on the DataTransfer object.
+
+  return false;
+}
+
+function handleDragEnter(e) {
+  // this / e.target is the current hover target.
+}
+
+function handleDragLeave(e) {
+  this.classList.remove('over');  // this / e.target is previous target element.
+}
+
+function handleDrop(e) {
+  // this/e.target is current target element.
+
+  if (e.stopPropagation) {
+    e.stopPropagation(); // Stops some browsers from redirecting.
+  }
+
+  // Don't do anything if dropping the same column we're dragging.
+  if (dragSrcEl != this) {
+    // Set the source column's HTML to the HTML of the column we dropped on.
+    //alert(this.outerHTML);
+    // dragSrcEl.innerHTML = this.innerHTML;
+    //this.innerHTML = e.dataTransfer.getData('text/html');
+    this.parentNode.removeChild(dragSrcEl);
+    var dropHTML = e.dataTransfer.getData('text/html');
+    this.insertAdjacentHTML('beforebegin',dropHTML);
+    var dropElem = this.previousSibling;
+    addDnDHandlers(dropElem);
+    
+  }
+  this.classList.remove('over');
+  return false;
+}
+
+function handleDragEnd(e) {
+  // this/e.target is the source node.
+  this.classList.remove('over');
+
+  // [].forEach.call(cols, function (col) {
+  //   col.classList.remove('over');
+  // });
+}
+
+function addDnDHandlers(elem) {
+  elem.addEventListener('dragstart', handleDragStart, false);
+  elem.addEventListener('dragenter', handleDragEnter, false)
+  elem.addEventListener('dragover', handleDragOver, false);
+  elem.addEventListener('dragleave', handleDragLeave, false);
+  elem.addEventListener('drop', handleDrop, false);
+  elem.addEventListener('dragend', handleDragEnd, false);
+
+}
+
+var cols = document.querySelectorAll('#dock .dropzone');
+[].forEach.call(cols, addDnDHandlers);
+
+
+</script>
+        <footer id="footer" class="footer">
+    <div class="copyright">
+        <span>© 年久失修 2006 - 2020 | Powered by <a href="https://hexo.io" target="_blank">Hexo</a> & <a href="https://github.com/Siricee/hexo-theme-Chic" target="_blank">Chic</a></span>
+    </div>
+</footer>
+
+    </div>
+
+<script>
+    var mobileBtn = function f() {
+        var toggleMenu = document.getElementsByClassName("menu-toggle")[0];
+        var mobileMenu = document.getElementById("mobile-menu");
+        if(toggleMenu.classList.contains("active")){
+           toggleMenu.classList.remove("active")
+            mobileMenu.classList.remove("active")
+        }else{
+            toggleMenu.classList.add("active")
+            mobileMenu.classList.add("active")
+        }
+    }
+</script>
+<script>
+   function gohome() {
+        location.href = "/";
+    };
+    function goList() {
+        location.href = "/archives";
+    };
+</script>
+<script>
+
+if(window.location.pathname == "/"){ 
+    gsap.from('.intro', {opacity: 0, duration: 3, z: -50, ease: 'elastic(1, 0.5)'});
+    gsap.from('.dock img', {opacity: 0, duration: 1, y: -50, ease: 'Power2.easeInOut', stagger: 0.18});
+}
+else {
+    gsap.from('.post-wrap', {opacity: 0, duration: 3, z: -50, ease: 'elastic(1, 0.5)'});
+}
+</script>
+<script>
+   show('#finder', '');
+   show('#tag', 'tag');
+   show('#about', 'about');
+   show('#archive', 'archive');
+   show('#category', 'categories');
+
+   function show(icon,icon_name) {
+    var li = document.querySelector(icon);
+    if(icon=="#finder"){
+        li.lastElementChild.style.opacity="1";
+    } else {
+    li.lastElementChild.style.opacity=window.location.href.includes(icon_name)?"1":"0";}
+   }
+   
+</script>
+</body>
+</html>
