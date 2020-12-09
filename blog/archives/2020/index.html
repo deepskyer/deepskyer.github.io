@@ -18,7 +18,7 @@
 
 
 
-    <link rel="icon" href="/favicon.ico">
+    <link rel="icon" href="/blog/favicon.ico">
 
 
 <link href="https://fonts.googleapis.com/css?family=Cairo:300,400,700|Droid+Sans+Mono|Roboto+Mono" rel="stylesheet">
@@ -27,7 +27,7 @@
 
     <!-- stylesheets list from _config.yml -->
     
-    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/blog/css/style.css">
     
 
 
@@ -35,13 +35,13 @@
 
     <!-- scripts list from _config.yml -->
     
-    <script src="/js/script.js"></script>
+    <script src="/blog/js/script.js"></script>
     
-    <script src="/js/tocbot.min.js"></script>
+    <script src="/blog/js/tocbot.min.js"></script>
     
-    <script src="/js/chart.js"></script>
+    <script src="/blog/js/chart.js"></script>
     
-    <script src="/js/gsap.js"></script>
+    <script src="/blog/js/gsap.js"></script>
     
 
 
@@ -59,16 +59,16 @@
         <header>
     <nav class="navbar">
         <div class="container">
-            <div class="navbar-header header-logo"><a href="/">年久失修的blog</a></div>
+            <div class="navbar-header header-logo"><a href="/blog/">年久失修的blog</a></div>
             <div class="menu navbar-right">
                 
-                    <a class="menu-item" href="/archives">Archives</a>
+                    <a class="menu-item" href="/blog/archives">Archives</a>
                 
-                    <a class="menu-item" href="/category">Category</a>
+                    <a class="menu-item" href="/blog/category">Category</a>
                 
-                    <a class="menu-item" href="/tag">Tag</a>
+                    <a class="menu-item" href="/blog/tag">Tag</a>
                 
-                    <a class="menu-item" href="/about">About</a>
+                    <a class="menu-item" href="/blog/about">About</a>
                 
                 <input id="switch_default" type="checkbox" class="switch_default">
                 <label for="switch_default" class="toggleBtn"></label>
@@ -81,19 +81,19 @@
         <div class="container">
             <div class="navbar-header">
                 <div>
-                    <a href="/">年久失修的blog</a><a id="mobile-toggle-theme">·&nbsp;Light</a>
+                    <a href="/blog/">年久失修的blog</a><a id="mobile-toggle-theme">·&nbsp;Light</a>
                 </div>
                 <div class="menu-toggle" onclick="mobileBtn()">&#9776; Menu</div>
             </div>
             <div class="menu" id="mobile-menu">
                 
-                    <a class="menu-item" href="/archives">Archives</a>
+                    <a class="menu-item" href="/blog/archives">Archives</a>
                 
-                    <a class="menu-item" href="/category">Category</a>
+                    <a class="menu-item" href="/blog/category">Category</a>
                 
-                    <a class="menu-item" href="/tag">Tag</a>
+                    <a class="menu-item" href="/blog/tag">Tag</a>
                 
-                    <a class="menu-item" href="/about">About</a>
+                    <a class="menu-item" href="/blog/about">About</a>
                 
             </div>
         </div>
@@ -116,7 +116,7 @@
         
 
         <article class="archive-item">
-            <a class="archive-item-link" href="/2020/07/08/20200708/">用DevOps发布一篇博文是一种怎样的体验</a>
+            <a class="archive-item-link" href="/blog/2020/07/08/20200708/">用DevOps发布一篇博文是一种怎样的体验</a>
             <span class="archive-item-date">July 8, 2020</span>
         </article>
     
@@ -129,21 +129,21 @@
         <li class="dropzone" draggable="true" id="finder">
             <a href="javascript:delay('/category', finder)">    
                 <em><span>Finder</span></em>
-                <img src="/image/finder.png" alt="Finder" />
+                <img src="/blog/image/finder.png" alt="Finder" />
             </a>
             <span class="indicator"></span>
         </li>
         <li class="dropzone" draggable="true" id="tag">
             <a href="javascript:delay('/tag', tag)">    
                 <em><span>Tag</span></em>
-                <img src="/image/tag.png" alt="Tag" />
+                <img src="/blog/image/tag.png" alt="Tag" />
             </a>
             <span class="indicator"></span>
         </li>
         <li class="dropzone" draggable="true" id="archive">
             <a href="javascript:delay('/archives', archive)">
                 <em><span>Archive</span></em>
-                <img src="/image/list.png" alt="Archive" />
+                <img src="/blog/image/list.png" alt="Archive" />
             </a>
             <span class="indicator"></span>
         </li>
@@ -151,7 +151,7 @@
         <li class="dropzone" draggable="true" id="category">
             <a href="javascript:delay('/categories/涂鸦/', category)">    
                 <em><span>Preview</span></em>
-                <img src="/image/category.png" alt="Category" />
+                <img src="/blog/image/category.png" alt="Category" />
             </a>
             <span class="indicator"></span>
         </li>
@@ -159,7 +159,7 @@
         <li class="dropzone" draggable="true" id="about">
             <a href="javascript:delay('/about', about)"> 
                 <em><span>About</span></em>
-                <img src="/image/about.png" alt="About" />
+                <img src="/blog/image/about.png" alt="About" />
             </a>
             <span class="indicator"></span>
         </li>
@@ -276,15 +276,15 @@ var cols = document.querySelectorAll('#dock .dropzone');
 </script>
 <script>
    function gohome() {
-        location.href = "/";
+        location.href = "/blog/";
     };
     function goList() {
-        location.href = "/archives";
+        location.href = "/blog/archives";
     };
 </script>
 <script>
 
-if(window.location.pathname == "/"){ 
+if(window.location.pathname == "/blog/"){ 
     gsap.from('.intro', {opacity: 0, duration: 3, z: -50, ease: 'elastic(1, 0.5)'});
     gsap.from('.dock img', {opacity: 0, duration: 1, y: -50, ease: 'Power2.easeInOut', stagger: 0.18});
 }
