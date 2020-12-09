@@ -202,7 +202,7 @@
 
         <div class="post-content">
             <p>Publishing a blog has never been this complicated!</p>
-<p><img src="/images/devops-101.png" alt="DevOps 101"></p>
+<p><img src="./images/devops-101.png" alt="DevOps 101"></p>
 <p>几年年前开始用mark down写博客，hexo生成静态网页部署到github pages。这段时间突然想到更加化简为烦的流程。我要用DevOps的方式的来发布一篇博客文章。</p>
 <p>本流程涉及到的工具包括但不仅限于：Node.js, Hexo，Git，Jenkins，Docker，Kubernetes，Nginx。</p>
 <p>整个程序是这样的：</p>
@@ -213,7 +213,7 @@
 <li>DockerFile</li>
 <li>Hexo</li>
 </ul>
-<h3 id="Jenkins流程"><a href="#Jenkins流程" class="headerlink" title="Jenkins流程"></a>Jenkins流程</h3><p><img src="/images/jenkins_pipeline.png" alt="jenkins pipeline"></p>
+<h3 id="Jenkins流程"><a href="#Jenkins流程" class="headerlink" title="Jenkins流程"></a>Jenkins流程</h3><p><img src="./images/jenkins_pipeline.png" alt="jenkins pipeline"></p>
 <p>Jenkins的流程分为以下几个阶段：</p>
 <ul>
 <li>Stage 1：git check out。这一步里Jenkins会将repo clone到该机器上。</li>
@@ -221,7 +221,7 @@
 <li>Stage 3：将这个image push到docker hub上。</li>
 <li>stage 4：通过shell script更新Kubernetes deployment.yml文件中docker image的版本号并且apply这个新的deployment，开始从docker hub上pull这个新生成的image，然后开始部署。</li>
 </ul>
-<p><img src="/images/kubectl.png" alt="jenkins pipeline"></p>
+<p><img src="./images/kubectl.png" alt="jenkins pipeline"></p>
 <p>本流程完全是为了体验DevOps是个什么东西，要花钱的部分全部都在自己机器上搞定。没有scale up的不用考虑Kubernetes, 倒是可以用Jenkins和docker部署。但是hexo不是提供了命令行直接部署吗？</p>
 
         </div>
