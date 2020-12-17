@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Focus</title>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.2.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.0/firebase-database.js"></script>
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/8.2.0/firebase-analytics.js"></script>
+
+    <script>
+      // Your web app's Firebase configuration
+      // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+      var firebaseConfig = {
+        apiKey: "AIzaSyASUtUbTFJheTMaHXQgBrynju4XkCCTeu0",
+        authDomain: "meetfocus-43417.firebaseapp.com",
+        databaseURL: "https://meetfocus-43417-default-rtdb.firebaseio.com",
+        projectId: "meetfocus-43417",
+        storageBucket: "meetfocus-43417.appspot.com",
+        messagingSenderId: "246638013621",
+        appId: "1:246638013621:web:7f092d900cbbc566ebe2fc",
+        measurementId: "G-L9TYW8H5KX",
+      };
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+      firebase.analytics();
+    </script>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="box.css" />
+  </head>
+  <body>
+    <div id="overlay" class="loader">
+      <div class="one"></div>
+      <div class="two"></div>
+    </div>
+    <div><input class="toggle-button" id="focus" type="checkbox" /></div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
