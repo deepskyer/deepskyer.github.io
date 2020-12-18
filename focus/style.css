@@ -1,7 +1,7 @@
 :root {
   --main-bg-color: #000000;
   --toggle-color: #fff;
-  --toggle-bg-color: #c6c6c6;
+  --toggle-bg-color: #5e5e5e;
   --toggle-bg-color-active: #03a9f4;
   --toggle-width: 200px;
   --toggle-height: calc(var(--toggle-width) / 2);
