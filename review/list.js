@@ -22,7 +22,7 @@ function confirm(e, t) {
             firebase
               .database()
               .ref("records/" + e + "/reviewDates")
-              .set({ [d]: !0 });
+              .update({ [d]: !0 });
         }
       });
 }
