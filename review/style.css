@@ -275,3 +275,17 @@ a:hover {
 .primarios:nth-child(3) {
   animation-delay: 0.4s;
 }
+
+#badge {
+  display: block;
+  border-radius: 20px;
+  padding: 0 8px;
+  color: #fff;
+  font-size: 12px;
+  position: absolute;
+  top: -9px;
+  right: -15px;
+  font-weight: 500;
+  transform: scale(0.6);
+  background-color: rgb(236, 64, 122);
+}

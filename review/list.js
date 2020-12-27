@@ -2,11 +2,12 @@ const dbObject = firebase.database().ref().child("records");
 
 dbObject.on("value", (snap) => {
   var ul = document.getElementById("list");
+  var badge = document.getElementById("badge");
   removeAllChildNodes(ul);
   var today = new Date();
 
   var data = snap.val();
-
+  var count = 0;
   for (var key in data) {
     if (data.hasOwnProperty(key)) {
       var reviewDates = data[key]["reviewDates"];
@@ -21,6 +22,8 @@ dbObject.on("value", (snap) => {
           icon.id = key;
           if (data[key]["reviewDates"][date] == true) {
             icon.classList.add("fa", "fa-check", "check");
+          } else {
+            count = count + 1;
           }
           var link = document.createElement("a");
           var linkText = document.createTextNode(
@@ -64,6 +67,8 @@ dbObject.on("value", (snap) => {
       }
     }
   }
+
+  badge.innerText = count;
 });
 
 function removeAllChildNodes(parent) {
