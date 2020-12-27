@@ -10,7 +10,7 @@ body {
     "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial,
     sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   font-variant: tabular-nums;
-  background-color: #fff;
+  background-color: #fafafa;
   -webkit-font-feature-settings: "tnum";
   font-feature-settings: "tnum";
 }
@@ -107,6 +107,7 @@ a:hover {
   border: 1px solid#ddd;
   background-color: #fff;
   padding: 1rem;
+  border-radius: 3px;
 }
 
 .navbar__1Bue {
