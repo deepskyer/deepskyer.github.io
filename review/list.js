@@ -1,116 +1,86 @@
 const dbObject = firebase.database().ref().child("records");
-
-dbObject.on("value", (snap) => {
-  var ul = document.getElementById("list");
-  var badge = document.getElementById("badge");
-  removeAllChildNodes(ul);
-  var today = new Date();
-
-  var data = snap.val();
-  var count = 0;
-  for (var key in data) {
-    if (data.hasOwnProperty(key)) {
-      var reviewDates = data[key]["reviewDates"];
-      for (var date in reviewDates) {
-        var reviewDate = new Date(date);
-        if (today.setHours(0, 0, 0, 0) == reviewDate.setHours(0, 0, 0, 0)) {
-          var item = document.createElement("li");
-          var faSpan = document.createElement("span");
-          faSpan.className = "fa-li";
-          var icon = document.createElement("i");
-          faSpan.appendChild(icon);
-          icon.id = key;
-          if (data[key]["reviewDates"][date] == true) {
-            icon.classList.add("fa", "fa-check", "check");
-          } else {
-            count = count + 1;
-          }
-          var link = document.createElement("a");
-          var linkText = document.createTextNode(
-            key
-              .split("-")
-              .map((word) => {
-                return word[0].toUpperCase() + word.substring(1);
-              })
-              .join(" ")
+function removeAllChildNodes(e) {
+  for (; e.firstChild; ) e.removeChild(e.firstChild);
+}
+function getDiffDays(e, t) {
+  var a = new Date(t),
+    r = (new Date(e).getTime() - a.getTime()) / 864e5;
+  return Math.round(r);
+}
+function confirm(e, t) {
+  document.getElementById(e).classList.add("fa", "fa-check", "check"),
+    (document.getElementById(t).hidden = !0),
+    firebase
+      .database()
+      .ref("records/" + e)
+      .on("value", (t) => {
+        var a = new Date(),
+          r = t.val().reviewDates;
+        for (var d in r) {
+          var n = new Date(d);
+          a.setHours(0, 0, 0, 0) == n.setHours(0, 0, 0, 0) &&
+            firebase
+              .database()
+              .ref("records/" + e + "/reviewDates")
+              .set({ [d]: !0 });
+        }
+      });
+}
+dbObject.on("value", (e) => {
+  var t = document.getElementById("list"),
+    a = document.getElementById("badge");
+  removeAllChildNodes(t);
+  var r = new Date(),
+    d = e.val(),
+    n = 0;
+  for (var i in d)
+    if (d.hasOwnProperty(i)) {
+      var s = d[i].reviewDates;
+      for (var c in s) {
+        var o = new Date(c);
+        if (r.setHours(0, 0, 0, 0) == o.setHours(0, 0, 0, 0)) {
+          var l = document.createElement("li"),
+            m = document.createElement("span");
+          m.className = "fa-li";
+          var f = document.createElement("i");
+          m.appendChild(f),
+            (f.id = i),
+            1 == d[i].reviewDates[c]
+              ? f.classList.add("fa", "fa-check", "check")
+              : (n += 1);
+          var u = document.createElement("a"),
+            v = document.createTextNode(
+              i
+                .split("-")
+                .map((e) => e[0].toUpperCase() + e.substring(1))
+                .join(" ")
+            );
+          u.appendChild(v),
+            (u.title = i),
+            (u.href = "https://leetcode.com/problems/" + i);
+          var p = document.createElement("span");
+          p.className = "days days-" + getDiffDays(c, d[i].createdAt);
+          var h = document.createTextNode(
+            "Day " + getDiffDays(c, d[i].createdAt)
           );
-          link.appendChild(linkText);
-          link.title = key;
-          link.href = "https://leetcode.com/problems/" + key;
-
-          var days = document.createElement("span");
-          days.className =
-            "days days-" + getDiffDays(date, data[key]["createdAt"]);
-          var dayText = document.createTextNode(
-            "Day " + getDiffDays(date, data[key]["createdAt"])
-          );
-          days.appendChild(dayText);
-
-          var input = document.createElement("input");
-          input.className = "confirm";
-          input.id = key + "-done";
-          input.type = "button";
-          input.value = "Done";
-          input.setAttribute(
-            "onclick",
-            "confirm('" + key + "', '" + key + "-done');"
-          );
-          if (data[key]["reviewDates"][date] == true) {
-            input.setAttribute("hidden", true);
-          }
-          item.appendChild(faSpan);
-          item.appendChild(link);
-          item.appendChild(days);
-          item.appendChild(input);
-          list.appendChild(item);
+          p.appendChild(h);
+          var D = document.createElement("input");
+          (D.className = "confirm"),
+            (D.id = i + "-done"),
+            (D.type = "button"),
+            (D.value = "Done"),
+            D.setAttribute(
+              "onclick",
+              "confirm('" + i + "', '" + i + "-done');"
+            ),
+            1 == d[i].reviewDates[c] && D.setAttribute("hidden", !0),
+            l.appendChild(m),
+            l.appendChild(u),
+            l.appendChild(p),
+            l.appendChild(D),
+            list.appendChild(l);
         }
       }
     }
-  }
-
-  badge.innerText = count;
+  a.innerText = n;
 });
-
-function removeAllChildNodes(parent) {
-  while (parent.firstChild) {
-    parent.removeChild(parent.firstChild);
-  }
-}
-
-function getDiffDays(now, startDate) {
-  var date1 = new Date(startDate);
-  var date2 = new Date(now);
-
-  // To calculate the time difference of two dates
-  var Difference_In_Time = date2.getTime() - date1.getTime();
-
-  // To calculate the no. of days between two dates
-  var Difference_In_Days = Difference_In_Time / (1000 * 3600 * 24);
-  return Math.round(Difference_In_Days);
-}
-
-function confirm(problemName, button) {
-  document.getElementById(problemName).classList.add("fa", "fa-check", "check");
-  document.getElementById(button).hidden = true;
-  const dbProblem = firebase.database().ref("records/" + problemName);
-
-  //update the review to true
-  dbProblem.on("value", (snap) => {
-    var today = new Date();
-    var data = snap.val();
-
-    var reviewDates = data["reviewDates"];
-
-    for (var date in reviewDates) {
-      var reviewDate = new Date(date);
-      if (today.setHours(0, 0, 0, 0) == reviewDate.setHours(0, 0, 0, 0)) {
-        firebase
-          .database()
-          .ref("records/" + problemName + "/reviewDates")
-          .set({
-            [date]: true,
-          });
-      }
-    }
-  });
-}
