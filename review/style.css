@@ -24,8 +24,11 @@ a {
   color: #08c;
   text-decoration: none;
   margin-right: 15px;
-  line-height: 2em;
+  line-height: 1.42857143;
+  vertical-align: top;
   margin-left: 10px;
+  outline: none;
+  transition: color 0.3s;
 }
 
 a:hover {
@@ -35,44 +38,35 @@ a:hover {
 .days {
   padding: 0px 6px 2px 6px;
   font-size: 11px;
-  border-radius: 3px;
-  border: 1px solid;
+  border-radius: 1020px;
+  color: #fff;
 }
 
 .days-30 {
-  background-color: #f6fff7;
-  border-color: #66bb6a;
-  color: #66bb6a;
+  background-color: #66bb6a;
 }
 
 .days-15 {
-  background-color: #ecf4ff;
-  border-color: #0d6efd;
-  color: #0d6efd;
+  background-color: #0d6efd;
 }
 
 .days-7 {
-  background-color: #f2efff;
-  border-color: #7566bb;
-  color: #7566bb;
+  background-color: #7566bb;
 }
 
 .days-3 {
-  background-color: #fff3e0;
-  border-color: #ffa726;
-  color: #ffa726;
+  background-color: #ffa726;
 }
 
 .days-1 {
-  background-color: #fff1f2;
+  background-color: #dc3545;
   border-color: #dc3545;
-  color: #dc3545;
 }
 
 .check {
   font-size: 10px;
   padding: 11px;
-  color: #449d44 !important;
+  color: #66bb6a;
 }
 
 .confirm {
@@ -91,7 +85,6 @@ a:hover {
   margin: 0px 23px;
   float: right;
   outline: none;
-  margin-top: 8px;
 }
 
 .confirm:hover {
