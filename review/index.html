@@ -16,6 +16,11 @@
     <script src="fire.js"></script>
   </head>
   <body>
+    <div class="loading" id="overlay">
+      <div class="primarios"></div>
+      <div class="primarios"></div>
+      <div class="primarios"></div>
+    </div>
     <div class="navbar__1Bue">
       <div class="navbar-container__2Y7K constrained-width__2SF0">
         <div class="navbar-left-container__3-qz">
@@ -61,6 +66,14 @@
       <ul class="fa-ul" id="list"></ul>
     </div>
     <script src="list.js"></script>
-    <script></script>
+    <script>
+      setTimeout(show, 1000);
+
+      function show() {
+        var overlay = document.getElementById("overlay");
+        overlay.style.visibility = "hidden";
+        overlay.style.opacity = "0";
+      }
+    </script>
   </body>
 </html>
