@@ -476,3 +476,9 @@ span .show > .btn-secondary.dropdown-toggle:focus {
   background-color: rgb(250, 250, 250) !important;
   color: rgb(58, 58, 58) !important;
 }
+
+td {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
