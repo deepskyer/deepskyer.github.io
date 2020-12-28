@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Review - Leetcode</title>
+    <link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32" />
+    <script
+      src="https://kit.fontawesome.com/b825bdc33f.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://www.gstatic.com/firebasejs/8.2.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.0/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.0/firebase-analytics.js"></script>
+    <script src="fire.js"></script>
+  </head>
+  <body>
+    <div class="loading" id="overlay">
+      <div class="primarios"></div>
+      <div class="primarios"></div>
+      <div class="primarios"></div>
+    </div>
+    <div class="navbar__1Bue">
+      <div class="navbar-container__2Y7K constrained-width__2SF0">
+        <div class="navbar-left-container__3-qz">
+          <div class="nav-item-container__16kF">
+            <a href="https://www.leetcode.com" class="nav-item__5BvG"
+              ><img
+                class="logo__3xn0"
+                src="https://assets.leetcode.com/static_assets/public/webpack_bundles/images/logo-dark.e99485d9b.svg"
+                alt="logo"
+            /></a>
+          </div>
+          <div class="nav-item-container__16kF">
+            <a
+              href="https://leetcode.com/problemset/all/"
+              class="nav-item__5BvG"
+              >Problems</a
+            >
+          </div>
+          <div class="nav-item-container__16kF">
+            <a href="https://leetcode.com/contest/" class="nav-item__5BvG"
+              >Contest</a
+            >
+          </div>
+          <div class="nav-item-container__16kF">
+            <a
+              href="https://leetcode.com/discuss/interview-question?currentPage=1&orderBy=hot&query="
+              class="nav-item__5BvG"
+              >Discuss</a
+            >
+          </div>
+          <div class="nav-item-container__16kF">
+            <a href="/review/deep" class="nav-item__5BvG"
+              >Review<span id="badge"></span
+            ></a>
+          </div>
+          <div class="nav-item-container__16kF">
+            <a href="/review/deep/stats.html" class="nav-item__5BvG"
+              >Review Report</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="page-heading">
+      <div class="page-label">Welcome Bing,</div>
+      <div class="title explore-page-title">Today's Review Tasks</div>
+    </div>
+
+    <div class="problem-list">
+      <ul class="fa-ul" id="list"></ul>
+    </div>
+    <script src="list.js"></script>
+    <script>
+      setTimeout(show, 1000);
+
+      function show() {
+        var overlay = document.getElementById("overlay");
+        overlay.style.visibility = "hidden";
+        overlay.style.opacity = "0";
+      }
+    </script>
+  </body>
+</html>

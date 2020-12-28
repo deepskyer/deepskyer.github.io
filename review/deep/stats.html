@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Review Stats - Leetcode</title>
+    <link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32" />
+    <script
+      src="https://kit.fontawesome.com/b825bdc33f.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://www.gstatic.com/firebasejs/8.2.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.0/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.0/firebase-analytics.js"></script>
+    <script src="fire.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/bootstrap-table@1.18.1/dist/bootstrap-table.min.css"
+    />
+  </head>
+  <body>
+    <div class="loading" id="overlay">
+      <div class="primarios"></div>
+      <div class="primarios"></div>
+      <div class="primarios"></div>
+    </div>
+    <div class="navbar__1Bue">
+      <div class="navbar-container__2Y7K constrained-width__2SF0">
+        <div class="navbar-left-container__3-qz">
+          <div class="nav-item-container__16kF">
+            <a href="https://www.leetcode.com" class="nav-item__5BvG"
+              ><img
+                class="logo__3xn0"
+                src="https://assets.leetcode.com/static_assets/public/webpack_bundles/images/logo-dark.e99485d9b.svg"
+                alt="logo"
+            /></a>
+          </div>
+          <div class="nav-item-container__16kF">
+            <a
+              href="https://leetcode.com/problemset/all/"
+              class="nav-item__5BvG"
+              >Problems</a
+            >
+          </div>
+          <div class="nav-item-container__16kF">
+            <a href="https://leetcode.com/contest/" class="nav-item__5BvG"
+              >Contest</a
+            >
+          </div>
+          <div class="nav-item-container__16kF">
+            <a
+              href="https://leetcode.com/discuss/interview-question?currentPage=1&orderBy=hot&query="
+              class="nav-item__5BvG"
+              >Discuss</a
+            >
+          </div>
+          <div class="nav-item-container__16kF">
+            <a href="/review/deep" class="nav-item__5BvG"
+              >Review<span id="badge"></span
+            ></a>
+          </div>
+          <div class="nav-item-container__16kF">
+            <a href="/review/deep/stats.html" class="nav-item__5BvG"
+              >Review Report</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="page-heading report">
+      <div class="page-label">Bing's Report</div>
+      <div class="title explore-page-title">Review History</div>
+    </div>
+
+    <main role="main" class="container">
+      <div class="my-3 p-3 list-group">
+        <table
+          id="table"
+          data-search="true"
+          data-pagination="true"
+          class="table table-borderless"
+        >
+          <thead>
+            <tr>
+              <th data-field="id" data-sortable="true">ID</th>
+              <th data-field="name" data-sortable="true">Problem</th>
+              <th data-field="createdAt" data-sortable="true">Started At</th>
+              <th data-field="day1" data-sortable="true">Day 1</th>
+              <th data-field="day3" data-sortable="true">Day 3</th>
+              <th data-field="day7" data-sortable="true">Day 7</th>
+              <th data-field="day15" data-sortable="true">Day 15</th>
+              <th data-field="day30" data-sortable="true">Day 30</th>
+              <th
+                data-field="operate"
+                data-formatter="operateFormatter"
+                data-events="operateEvents"
+              >
+                Reset
+              </th>
+            </tr>
+          </thead>
+        </table>
+      </div>
+    </main>
+
+    <script>
+      setTimeout(show, 1000);
+
+      function show() {
+        var overlay = document.getElementById("overlay");
+        overlay.style.visibility = "hidden";
+        overlay.style.opacity = "0";
+      }
+    </script>
+    <script src="jquery.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+      integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+      integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://unpkg.com/bootstrap-table@1.18.0/dist/bootstrap-table.min.js"></script>
+    <script src="app.js"></script>
+    <script>
+      var table = document.getElementById("table");
+      var targetTDs = table.querySelectorAll("tr");
+      for (var i = 0; i < targetTDs.length; i++) {
+        var td = targetTDs[i];
+      }
+    </script>
+  </body>
+</html>
