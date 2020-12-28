@@ -34,7 +34,7 @@ dbObject.on("value", (snap) => {
         if (days == Math.round(Difference_In_Days)) {
           return reviewDates[date] == true
             ? "<i class='fas fa-check' style='color:#449d44;  padding-left: 15px'></i>"
-            : date2.setHours(0, 0, 0, 0) <= today.setHours(0, 0, 0, 0)
+            : date2.setHours(0, 0, 0, 0) < today.setHours(0, 0, 0, 0)
             ? "<i class='fas fa-times' style='color:#d9534f; padding-left: 16px'></i>"
             : "";
         }
