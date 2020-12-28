@@ -36,7 +36,7 @@ dbObject.on("value", (snap) => {
             ? "<i class='fas fa-check' style='color:#449d44;  padding-left: 15px'></i>"
             : date2.setHours(0, 0, 0, 0) < today.setHours(0, 0, 0, 0)
             ? "<i class='fas fa-times' style='color:#d9534f; padding-left: 16px'></i>"
-            : "";
+            : "<i class='fas fa-bell' style='color:#e9ecef; padding-left: 15px'></i>";
         }
       }
     }
