@@ -5,6 +5,10 @@ body {
   background-color: #000;
 }
 
+.disable-dbl-tap-zoom {
+  touch-action: manipulation;
+}
+
 .banner {
   display: flex;
   padding: 0 50px;
