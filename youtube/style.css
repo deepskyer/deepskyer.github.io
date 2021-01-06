@@ -3,9 +3,6 @@ body {
   font-family: Arial;
   font-size: 5em;
   background-color: #000;
-}
-
-.disable-dbl-tap-zoom {
   touch-action: manipulation;
 }
 
